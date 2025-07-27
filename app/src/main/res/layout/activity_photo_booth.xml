@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoBoothActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_frame_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:contentDescription="Frame Overlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_frames"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#80000000"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/btn_capture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_frame"
+        android:contentDescription="Daftar pilihan bingkai foto"/>
+
+    <ImageButton
+        android:id="@+id/btn_capture"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/bg_capture_button"
+        android:contentDescription="Ambil Foto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_switch_camera"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_icon_circle_dark"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_switch_camera"
+        android:contentDescription="Ganti Kamera"
+        app:layout_constraintBottom_toBottomOf="@id/btn_capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_capture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

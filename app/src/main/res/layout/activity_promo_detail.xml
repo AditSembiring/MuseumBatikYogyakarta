@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PromoDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_promo_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/promo1"
+            android:contentDescription="Gambar Promo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_promo_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="8dp"
+                tools:text="Judul Promo yang Sangat Menarik" />
+
+            <TextView
+                android:id="@+id/tv_promo_detail_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="16dp"
+                tools:text="Berlaku hingga 31 Juli 2023" />
+
+            <TextView
+                android:id="@+id/tv_promo_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#424242"
+                android:lineSpacingExtra="4dp"
+                tools:text="Deskripsi lengkap tentang promo akan ditampilkan di sini. Jelaskan manfaat, syarat, dan ketentuan promo secara detail agar pengguna lebih tertarik. Tambahkan informasi penting lainnya seperti cara klaim atau kode promo jika ada." />
+
+            <Button
+                android:id="@+id/btn_promo_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Klaim Sekarang"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#c2802f"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="32dp"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
